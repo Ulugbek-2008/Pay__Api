@@ -1,0 +1,39 @@
+.service-section {
+    background-color: $BG-clr;
+    background-image: url(../../images/service-bg.png);
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+}
+.service { 
+    @include Display($items:center, $space:space-between, $gap:131px);
+} 
+.service__content-wrapper {
+    margin-top: 100px; 
+    width: 500px;
+}  
+.service__title {  
+    @include textStyle($MB:24px, $FS:48px, $FW:400, $CLR:$white-clr, $LH:56px, $CASE:inherit); 
+    font-family: "DM Serif Display"; 
+} 
+.service__text {  
+    @include textStyle($MB:32px, $FS:15px, $FW:400, $CLR:$white-clr, $LH:28px, $CASE:inherit);
+} 
+.service__btn {
+    @include buttonStyle($BTN_W:129px, $BTN_PY:15px, $BTN_BG_CLR:transparent,$BTN_BR_Radius:24px, $BTN_Border_CLR: $white-clr,$BTN_FS:15px,$BTN_FW:700, $BTN_LH:17.63px, $BTN_CLR:$white-clr,$BTN_CASE:inherit);
+    transition: all 0.3s linear;
+    &:hover{
+        @include buttonStyle($BTN_W:129px, $BTN_PY:15px, $BTN_BG_CLR:$white-clr,$BTN_BR_Radius:24px, $BTN_Border_CLR: $white-clr,$BTN_FS:15px,$BTN_FW:700, $BTN_LH:17.63px, $BTN_CLR:$BG-clr,$BTN_CASE:inherit);
+    }
+}
+.service__logo-wrapper {
+    width: 559px;
+    @include Display($items:center, $space:start, $gap:0px);
+    flex-wrap: wrap;
+}
+.service__link-top--{
+    padding-bottom: 40px;
+}
+.service__link{
+    
+    color: $white-clr;
+}
