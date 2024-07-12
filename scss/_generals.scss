@@ -10,7 +10,26 @@ body{
     font-family: "DM Serif Display", sans-serif;
     font-family: "Public sans", sans-serif;
     background-color: #EDF3F8;
-    background-image: url(../images/hero__bg.png);
-    background-repeat: no-repeat;
-    background-position: right top;
+    background-image: url(../images/hero__bg.png), url(../images/simple-bg.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right top,right bottom;
+}
+
+@media (max-width:850px){
+    body{
+        background-image: url(../../images/tablet.png);
+        background-repeat: no-repeat;
+        background-size: 949px auto;    
+        background-position: center top;
+        
+    }
+}
+
+@media (max-width:689px){
+    body{
+        background-image: url(../../images/mobile-bg.png);
+        background-repeat: no-repeat;
+        background-size: 780px auto; 
+        background-position: center top; 
+    }
 }

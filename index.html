@@ -30,10 +30,29 @@
                     </ul>
                 </div>
                 <a data-aos="zoom-in-left" href="#" class="header__link-demo"> Schedule a Demo </a>
-                <button data-aos="zoom-in-left" class="header__hamburger-btn">
+                <button onclick="handleMenuBtnClick" data-aos="zoom-in-left" class="header__menu-btn">
                     <img src="./images/hamburger-img.svg" alt="hamburger-img" width="28" height="17">
                 </button>
             </div>
+        </div>
+        <div class="navbar-menu navbar">
+            <div class="navbar__top">
+                <button onclick="handleCloseModal" class="navbar__top-btn">
+                    <img src="./images/close-icon.svg" alt="Close icon" width="22" height="23">
+                </button>
+            </div>
+            <ul class="navbar__list">
+                <li class="navbar__item">
+                    <a href="#" class="navbar__link"> Pricing</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#" class="navbar__link"> About</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#" class="navbar__link"> Contact</a>
+                </li>
+            </ul>
+            <a href="#" class="navbar__link-demo">Schedule link Demo</a>
         </div>
     </header>
     <main class="site-main">
@@ -55,7 +74,7 @@
                             </strong> 
                         </p>
                     </div>
-                    <img data-aos="zoom-in-left" src="./images/tell img.png" alt="Mobile img" class="hero__content-img" width="263" height="500">
+                    <img class="hero__content-img" data-aos="zoom-in-left" src="./images/tell img.png" alt="Mobile img" class="hero__content-img" width="263" height="500">
                 </div>
             </div>
         </section>
@@ -92,6 +111,28 @@
                 </div>
             </div>
         </section>
+        <section class="implement-section">
+            <div class="container">
+                <div class="implement">
+                    <img data-aos="fade-up-right" src="./images/implement-img.png" alt="implement-img" class="implement-img" width="445" height="284">
+                    <div data-aos="fade-up-left" class="implement__content-wrapper">
+                        <h2 class="implement__title"> Easy to implement</h2>
+                        <p class="implement__text"> Our API comes with just a few lines of code. You’ll be up and running in no time. We built our documentation page to integrate payments functionality with ease.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="simple-section">
+            <div class="container">
+                <div class="simple">
+                    <div data-aos="fade-up-right" class="simple__content-wrapper">
+                        <h2 class="simple__title"> Simple UI & UX</h2>
+                        <p class="simple__text"> Our pre-built form is easy to integrate in your app or website’s checkout flow and designed to optimize conversion. </p>
+                    </div>
+                    <img data-aos="fade-up-left" class="simple-bg" src="./images/UI_UX.png" alt="phone-img" width="566" height="500">
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="site-footer">
         <div class="container">
@@ -102,5 +143,6 @@
     <script>
         AOS.init();
       </script>
+     <script src="./js/main.js"></script>
 </body>
 </html>

@@ -22,6 +22,7 @@
 }
 .header__link-demo {
     @include  buttonStyle($BTN_W:173px, $BTN_PY:15px, $BTN_BG_CLR:$pink-clr,$BTN_BR_Radius:30px, $BTN_Border_CLR:transparent,$BTN_FS:16px,$BTN_FW:700, $BTN_LH:17px, $BTN_CLR:$white-clr,$BTN_CASE:inherit);
+    transition: all 0.3s linear;
     &:hover{
         opacity: 75%;
     }
@@ -29,39 +30,74 @@
         @include  buttonStyle($BTN_W:173px, $BTN_PY:15px, $BTN_BG_CLR:transparent,$BTN_BR_Radius:30px, $BTN_Border_CLR:$pink-clr,$BTN_FS:16px,$BTN_FW:700, $BTN_LH:17px, $BTN_CLR:$pink-clr,$BTN_CASE:inherit);
     }
 }
-.header__hamburger-btn { 
+.header__menu-btn { 
     background-color: transparent;
     border: none;
     display: none;
 }
+.navbar-menu {
+    padding: 25px;
+    position: fixed;
+    width: 80%;
+    height: 100vh;
+    background-color: #1B262F;
+    z-index: 50;
+    top: 0;
+    right: -100%;
+    transition: all 0.3s linear;
+}
+.show{
+    right: 0;
+}
+.navbar__top {
+    text-align: end;
+    padding: 23px 0 25px;
+    border-bottom: 1px solid $white-clr;
+}
+.navbar__top-btn {
+    background-color: transparent;
+    border: none;
+}
+.navbar__list {
+    padding: 43px 0 32px;
+    @include Display($items:center, $space:center, $gap:32px);
+}
+.navbar__link {
+    @include textStyle($MB:0px, $FS:20px, $FW:700, $CLR:$white-clr, $LH:23px, $CASE:capitalize);
+    transition: all 0.3s linear;
+    &:hover{
+        color: $title-clr;
+    }
+}
+.navbar__link-demo {
+    display: inline-block;
+    @include  buttonStyle($BTN_W:100%, $BTN_PY:15px, $BTN_BG_CLR:$pink-clr,$BTN_BR_Radius:30px, $BTN_Border_CLR:transparent,$BTN_FS:16px,$BTN_FW:700, $BTN_LH:17px, $BTN_CLR:$white-clr,$BTN_CASE:inherit);
+    &:hover{
+        opacity: 75%;
+    } 
+}
 
-@media (max-width:900px){
+@media (max-width:850px){
     .site-header{
         padding: 40px 0 40px;
     }
-    body{
-        background-image: url(../../images/tablet.png);
-        background-repeat: no-repeat;
-        background-position: center top;
-        background-size: 100% auto;
+    .header__logo-img{
+        width: 135px;
+        height: 38px;
     }
 }
 
-@media (max-width:692px){
+@media (max-width:689px){
     .site-header{
         padding: 40px 0 32px;
     }
-    body{
-        background-image: url(../../images/mobile-bg.png);
-        background-repeat: no-repeat;
-        background-position: center top;
-        background-size: 100% auto;
-    }
-    
-    .header__list, .header__link-demo{
+    .header__list{
         display: none;
     }
-    .header__hamburger-btn{
+    .header__link-demo{
+        display: none;
+    }
+    .header__menu-btn{
         display: block;
     }
 }

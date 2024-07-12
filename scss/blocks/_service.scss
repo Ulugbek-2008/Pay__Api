@@ -1,8 +1,10 @@
 .service-section {
     background-color: $BG-clr;
-    background-image: url(../../images/service-bg.png);
+    background-image: url(/images/service-bg.png);
     background-repeat: no-repeat;
     padding-bottom: 100px;
+    background-size: 780px auto;
+    background-position: left top;
 }
 .service { 
     @include Display($items:center, $space:space-between, $gap:131px);
@@ -19,8 +21,7 @@
     @include textStyle($MB:32px, $FS:15px, $FW:400, $CLR:$white-clr, $LH:28px, $CASE:inherit);
 } 
 .service__btn {
-    @include buttonStyle($BTN_W:129px, $BTN_PY:15px, $BTN_BG_CLR:transparent,$BTN_BR_Radius:24px, $BTN_Border_CLR: $white-clr,$BTN_FS:15px,$BTN_FW:700, $BTN_LH:17.63px, $BTN_CLR:$white-clr,$BTN_CASE:inherit);
-    transition: all 0.3s linear;
+    @include buttonStyle($BTN_W:129px, $BTN_PY:15px, $BTN_BG_CLR:transparent,$BTN_BR_Radius:24px, $BTN_Border_CLR: $white-clr,$BTN_FS:15px,$BTN_FW:700, $BTN_LH:17.63px, $BTN_CLR:$white-clr,$BTN_CASE:inherit);  
     &:hover{
         @include buttonStyle($BTN_W:129px, $BTN_PY:15px, $BTN_BG_CLR:$white-clr,$BTN_BR_Radius:24px, $BTN_Border_CLR: $white-clr,$BTN_FS:15px,$BTN_FW:700, $BTN_LH:17.63px, $BTN_CLR:$BG-clr,$BTN_CASE:inherit);
     }
@@ -34,6 +35,57 @@
     padding-bottom: 40px;
 }
 .service__link{
-    
     color: $white-clr;
+}
+@media (max-width:951px){
+    .service{
+         @include Display($items:center, $space:space-between, $gap:0px);
+    }
+}
+@media (max-width:850px){
+    .service-section {
+        padding: 88px;
+        background-image: url(/images/service-tablet-bg.png);
+        background-repeat: no-repeat;
+        background-size: 780px auto;
+    }
+    .service{
+        margin: 0 auto;
+        width: 80%;
+        @include Display($items:center, $space:start, $gap:64px);
+        flex-direction: column-reverse;
+    }
+    .service__content-wrapper{
+        margin: 0 auto;
+        margin-top: 64px;
+        text-align: center;
+    }
+    .service__logo-wrapper{
+        margin: 0 auto;
+        @include Display($items:center, $space:space-between, $gap:35px);
+        flex-wrap: wrap;
+    }
+}
+@media (max-width:689px){
+    .service-section {
+        padding: 80px;
+        background-image: url(/images/service-mobile-bg.png);
+        background-repeat: no-repeat;
+        background-size: 780px auto;
+    }
+    .service{
+            width: 90%;
+            @include Display($items:center, $space:start, $gap:56px);
+            flex-direction: column-reverse;
+    }
+    .service__title {  
+        @include textStyle($MB:24px, $FS:32px, $FW:400, $CLR:$white-clr, $LH:36px, $CASE:inherit); 
+        font-family: "DM Serif Display"; 
+    } 
+    .service__logo-wrapper{
+        width: 368px;
+        margin: 0 auto;
+        @include Display($items:center, $space:space-between, $gap:40px);
+        flex-wrap: wrap;
+    }
 }
