@@ -1,0 +1,54 @@
+.registr-section { 
+    margin-bottom: 96px;
+}  
+.registr__content-wrpper {
+    @include Display($items:center, $space:space-between, $gap:230px);
+}
+.registr__title {
+    font-family: "DM Serif Display", sans-serif;
+    @include textStyle($MB:0px, $FS:48px, $FW:400, $CLR:$title-clr, $LH:56px, $CASE:inherit);
+}
+.registr__form {
+    width: 445px;
+}
+.registr__label{
+    width: 100%;
+    position: relative;
+}
+.registr__input {
+    border-radius: 24px;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 15px 5px 15px 27px;
+    box-shadow: 10px 10px 25px -10px #36536840;
+}
+.registr__input::placeholder{
+    color: $title-clr;
+}
+.registr__btn {
+    position: absolute;
+    right: 0;
+    margin: auto;
+    @include buttonStyle($BTN_W:173px, $BTN_PY:14px, $BTN_BG_CLR:$pink-clr,$BTN_BR_Radius:30px, $BTN_Border_CLR:transparent,$BTN_FS:16px,$BTN_FW:700, $BTN_LH:17px, $BTN_CLR:$white-clr,$BTN_CASE:inherit);
+    &:hover{
+        opacity: 75%;
+    }
+}
+@media (max-width:850px){
+    .registr__content-wrpper { 
+        @include Display($items:center, $space:start, $gap:40px);
+        flex-direction: column;
+    }
+    }
+    @media (max-width:689px){
+        .registr__content-wrpper { 
+            @include Display($items:center, $space:start, $gap:40px);
+            flex-direction: column;
+        }
+        .registr__btn{  
+            margin-top: 16px;
+            width: 100%;
+            position: static;
+        }  
+    }

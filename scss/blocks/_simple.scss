@@ -2,7 +2,7 @@
     padding-bottom: 146px;
 }
 .simple {
-    @include Display($items:center, $space:space-between, $gap:95px)
+    @include Display($items:center, $space:space-between, $gap:95px);
 }
 .simple__content-wrapper {
     width: 445px;
@@ -18,12 +18,13 @@
     .simple {
         @include Display($items:center, $space:start, $gap:48px);
         flex-direction: column-reverse;
+        width: 100%;
     }
     .simple__content-wrapper{
         text-align: center;
         width: 573px;
     }
-    .simple-bg{
+    .simple-bg{   
         width: 363px;
         height: 320px;
     }
